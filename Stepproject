@@ -1,0 +1,34 @@
+1. python -m venv myvenv
+2. goto activate
+3.myvenv/Scripts/activate
+
+4.come back pip freeze
+5. pip install django
+6.pip freeze
+show data
+asgiref==3.7.2
+Django==4.2.6
+sqlparse==0.4.4
+tzdata==2023.3
+7.django-admin startproject ciya(projectname)
+goto ciya
+8.django-admin startapp myciya(appname)
+9.python manage.py migrate
+10 python manage.py createsuperuser
+Username (leave blank to use 'administrator'):
+Email address: hanusamyak@gmail.com
+Password:
+Password (again):
+Superuser created successfully.
+11.python manage.py runserver
+
+
+then after create  webpage
+
+change app data
+1.views.py
+2.create urls.py
+
+goto projectname
+1. settings.py
+2. urls.py
