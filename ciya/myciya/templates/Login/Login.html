@@ -1,1 +1,11 @@
-login
+
+
+
+<form action="{% url 'handlelogin' %}" method="POST">
+	
+    {% csrf_token %}
+	<input type="text" name="email" />
+	<input type="text" name="password" />
+	<input type="submit" value="Login" />
+</form>
+
