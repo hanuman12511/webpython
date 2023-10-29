@@ -5,7 +5,10 @@ def login(req):
     context={}
     if(req.method=="POST"):
         print("login",req.POST.get('email'))
-        return redirect("register")
+        if req.POST.get('email') =="admin@gmail.com":
+            return redirect("home")
+        else :
+            return redirect("login")
     return render(req,"Login/Login.html",context) 
 def register(req):
     context={}
@@ -15,6 +18,8 @@ def register(req):
 def handlelogin(req):
     return HttpResponse("login successfully")
 
-
+def home(req):
+    context={}
+    return render(req,"home/home.html",context) 
 # Login is foldername
 #Login is web page

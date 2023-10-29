@@ -32,3 +32,36 @@ change app data
 goto projectname
 1. settings.py
 2. urls.py
+
+pip install mysqlclient  
+
+python manage.py migrate  
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'my_database',  
+        'USER': 'root',  
+        'PASSWORD': 'your_password',  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }  
+    }  
+}  
+
+create after DATABASES
+
+
+1.python manage.py makemigrations
+2.python manage.py migrate
+
+
+{% extends ".../path/base.html" %} 
+
+{% load static %}
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
