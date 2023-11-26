@@ -1,8 +1,18 @@
 
-<div class="col-md-12">
+<!-- <div class="col-md-12">
     <h1>All Students </h1>
     {% for data in form %}
         {{data.uid}}
       
     {% endfor %}
-</div>
+</div> -->
+
+
+<form  method="POST">
+	
+    {% csrf_token %}
+	<input type="text" name="name"  placeholder="Enter name"/><br>
+	<input type="email" name="email" placeholder="Enter email" /><br>
+	<input type="password" name="password" placeholder="********"/><br>
+	<input type="submit" value="register" />
+</form>
